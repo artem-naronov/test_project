@@ -4,7 +4,7 @@ export const useDataStore = defineStore({
   id: 'data',
   state: () => ({
     data: [],
-    editItem: '',
+    editItem: NaN,
     idList: 0,
     showModal: false,
     addModal: false,
@@ -15,17 +15,17 @@ export const useDataStore = defineStore({
     // doubleCount: (state) => state.data * 2
   },
   actions: {
-    add( value:Object) {
+    add( value:never) {
       this.data.splice(this.data.length, 0, value)
     },
-    edit(value:Object) {
+    edit(value:never) {
       this.data.splice(this.editItem, 1, value)
     },
-    listSort(param:string|number) {
+    listSort(param:never) {
       if(param == '') {
         this.sortList = this.data
       } else {
-        this.sortList = this.data.filter(item => item.id == param || item.descr.includes(param))
+        this.sortList = this.data.filter((item:any) => item.id == param || item.desc.includes(param))
       }
     }
   }

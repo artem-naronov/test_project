@@ -17,7 +17,7 @@
             <td>{{item.id }}</td>
             <td>{{item.type}}</td>
             <td>{{item.number}}</td>
-            <td>{{item.descr}}</td>
+            <td>{{item.desc}}</td>
             <td class="action">
               <span :id="'edit_' + item.id" class="edit icon" @click="change(index)"></span>
               <span :id="'del_' + item.id" class="del icon" @click="remove(index)"></span>

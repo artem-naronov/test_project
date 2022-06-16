@@ -14,7 +14,7 @@
             </div>
             <div>
                 <span> Примечание</span>
-                <textarea name="" id=""  v-model="form.descr"></textarea>
+                <textarea name="" id=""  v-model="form.desc"></textarea>
             </div>
             <input type="button" @click="add()" value="Добавить">
         </form>
@@ -29,7 +29,7 @@
             </div>
             <div>
                 <span> Примечание</span>
-                <textarea name="" id=""  v-model="edit.descr"></textarea>
+                <textarea name="" id=""  v-model="edit.desc"></textarea>
             </div>
             <input type="button" @click="add()" :value="button">
 
@@ -63,7 +63,7 @@
     const form = reactive({
         type: '',
         number: '',
-        descr: ''           
+        desc: ''           
     })
     const add = () => {      
         
@@ -72,7 +72,7 @@
                 id: edit.value.id,
                 type: edit.value.type,
                 number: edit.value.number,
-                descr: edit.value.descr
+                desc: edit.value.desc
             }          
             data.edit(arr)
         } else {
@@ -81,14 +81,14 @@
                 id: data.idList,
                 type: form.type,
                 number: form.number,
-                descr: form.descr
+                desc: form.desc
             }
             data.add(arr)
         }
         
         form.type = 0;
         form.number = '';
-        form.descr = '';
+        form.desc = '';
 
         data.showModal = false      
         data.editModal = false
