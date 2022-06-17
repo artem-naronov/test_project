@@ -8,6 +8,10 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <style>
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Syne&display=swap');
 
 #app {
@@ -18,20 +22,25 @@ import { RouterLink, RouterView } from 'vue-router'
   font-family: 'Syne', sans-serif;
   font-weight: normal;
 }
-input[type="button"] {
-    background: #313541;
-    padding: 6px;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    line-height: 24px;
-    width: 200px;
-    cursor: pointer;
-  }
-  input[type="button"]:hover {
-    background: #595c66;
-  }
-  input[type="button"]:active {
-    background: #DF6969;
-  }
+input, textarea { 
+  border-radius: 5px;
+  border: 1px solid #4a4a4a
+}
+button {
+  background: #313541;
+  padding: 6px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 5px;
+  width: 200px;
+  cursor: pointer;
+}
+button:hover {
+  background: #595c66;
+}
+button:active {
+  background: #DF6969;
+}
 </style>
